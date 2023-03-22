@@ -1,0 +1,89 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section-products {
+  @extend .section;
+  padding-top: 0px;
+}
+
+.conteiner {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header-wrap {
+  @extend .conteiner;
+  display: flex;
+  align-items: center;
+}
+
+.conteiner__contact {
+  margin-left: auto;
+  display: flex;
+  gap: 50px;
+}
+
+/* PAGE DESCRIPTION */
+/* PRODUCTS */
+.grid {
+  display: flex;
+  gap: 30px;
+}
+
+/* TEAM */
+.wrap-team {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* FOOTER */
+
+.conteiner-footer {
+  @extend .conteiner;
+  display: flex;
+  align-items: baseline;
+}
+
+.conteiner-social {
+  margin-left: 70px;
+}
+
+.conteiner-newsletter {
+  margin-left: auto;
+}
+
+/* TEAM, FOOTER */
+.grid-social {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* MODAL */
+.conteiner-modal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* NAVIGATION BUTTON */
+.grid-button {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+
+/* PORTFOLIO */
+.conteiner-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}

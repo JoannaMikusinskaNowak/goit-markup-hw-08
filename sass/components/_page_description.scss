@@ -1,0 +1,28 @@
+.grid__rectangle {
+  background-color: $buttons-port-color;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.grid__icon {
+  height: 70px;
+  width: 70px;
+}
+
+.section__title-description {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  margin-top: 30px;
+}
+
+.section__text-description {
+  color: $ouwer-text-color;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  line-height: 1.7;
+  margin-top: 10px;
+}

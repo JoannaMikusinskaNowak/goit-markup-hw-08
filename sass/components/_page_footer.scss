@@ -1,0 +1,116 @@
+.address:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: $secondary-text-color;
+  text-decoration: none;
+  line-height: 1.7;
+  font-style: normal;
+  display: flex;
+}
+
+.address__contact {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: $footer-text-color;
+  line-height: 1.7;
+  font-style: normal;
+  display: flex;
+  transition: $color-transition;
+
+  &:hover,
+  &:focus {
+    color: $acent-color;
+  }
+}
+
+.grid-social__shape {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $footer-circle-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: $color-transition, $background-transition;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $acent-color;
+  }
+}
+
+.form-email {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-email__input {
+  background-color: $background-footer-color;
+  color: $secondary-text-color;
+  min-height: 50px;
+  width: 358px;
+  border: solid 1px;
+  border-radius: 4px;
+  border-color: $footer-email-border;
+  box-shadow: 0px 4px 4px 0px $footer-shadow;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.button-footer {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  background-color: $acent-color;
+  color: $secondary-text-color;
+  cursor: pointer;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  min-width: 200px;
+  padding: 10px 42px;
+  margin-left: 12px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px $footer-shadow;
+  transition: $color-transition, $background-transition;
+}
+
+.button-footer:hover,
+.button-footer:focus {
+  background-color: $buttons-port-color;
+  color: $main-text-color;
+
+  &:hover + .button-footer__icon,
+  &:focus + .button-footer__icon {
+    fill: $main-text-color;
+  }
+}
+
+.button-footer__icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.conteiner-social__title {
+  color: $secondary-text-color;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: bold;
+  letter-spacing: 0.03em;
+  text-align: left;
+  line-height: 1.17;
+  margin-bottom: 20px;
+}

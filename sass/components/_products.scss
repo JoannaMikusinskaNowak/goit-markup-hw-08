@@ -1,0 +1,28 @@
+.section__title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  text-align: center;
+  fill: $ouwer-text-color;
+}
+
+.product-img {
+  position: relative;
+}
+
+.product-title {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $product-color;
+  width: 370px;
+  height: 70px;
+  color: $secondary-text-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  z-index: 1;
+  bottom: 0;
+}

@@ -1,0 +1,25 @@
+.grid-client__rectangle {
+  width: 170px;
+  height: 92px;
+  border: 1px solid;
+  border-color: currentColor;
+  border-radius: 4px;
+  color: $icon-social-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: $color-transition;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $acent-color;
+    outline: transparent;
+  }
+}
+
+.grid-client__icon {
+  fill: currentColor;
+  width: 106px;
+  height: 60px;
+}

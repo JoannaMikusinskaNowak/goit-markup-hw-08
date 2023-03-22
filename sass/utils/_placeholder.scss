@@ -1,0 +1,18 @@
+/* logo */
+.logo-studio {
+  font-family: $logo-font;
+  color: $logo-color-text;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.03em;
+  line-height: 1.17;
+
+  &__web {
+    color: $acent-color;
+  }
+}
+
+.logo-studio__white {
+  @extend .logo-studio;
+  color: $secondary-text-color;
+}

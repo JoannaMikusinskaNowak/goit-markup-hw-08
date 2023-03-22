@@ -1,0 +1,72 @@
+.portfolio {
+  width: 370px;
+  display: block;
+  transition: $shadow-transition;
+  color: $logo-color-text;
+
+  &:active,
+  &:focus,
+  &:hover,
+  &:visited {
+    transform: translateY(0%);
+    box-shadow: 1px 4px 6px 0px #00000029;
+    box-shadow: 0px 4px 4px 0px #0000000f;
+    box-shadow: 0px 1px 1px 0px #0000001f;
+  }
+}
+
+.portfolio:hover .portfolio__overlay,
+.portfolio:focus .portfolio__overlay {
+  transform: translateY(0%);
+  box-shadow: 1px 4px 6px 0px #00000029;
+  box-shadow: 0px 4px 4px 0px #0000000f;
+  box-shadow: 0px 1px 1px 0px #0000001f;
+}
+
+.portfolio__fill {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: $transform-transition;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  padding-left: 24px;
+  background-color: $acent-color;
+  color: $secondary-text-color;
+  opacity: 0.9;
+}
+
+.wrap-text {
+  border: 1px solid $contener-color;
+  border-top: 0;
+  padding: 20px 24px;
+}
+
+.wrap-text__title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: left;
+  line-height: 2;
+}
+
+.wrap-text__type {
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: $ouwer-text-color;
+  line-height: 1.9;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 4px;
+}

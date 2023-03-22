@@ -1,0 +1,104 @@
+/* navigation */
+.navigation {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  gap: 46px;
+}
+
+.navigation__element {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-decoration: none;
+  color: $main-text-color;
+  padding: 31px 0;
+  transition: $color-transition;
+
+  &:hover,
+  &:focus {
+    color: $acent-color;
+  }
+}
+
+.navigation__element:hover::after,
+.navigation__element:focus::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: $acent-color;
+}
+
+.navigation__element--current {
+  color: $acent-color;
+  position: relative;
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: "";
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: $acent-color;
+  }
+}
+
+/* contacts */
+.contact {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: left;
+  padding: 31px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: $ouwer-text-color;
+  fill: $ouwer-text-color;
+  display: flex;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    color: $acent-color;
+  }
+}
+
+.contact__icon {
+  border-radius: 0px;
+  margin-right: 10px;
+}
+
+.contact__icon--phone {
+  height: 16px;
+  width: 10px;
+  fill: currentColor;
+
+  &:hover,
+  &:active,
+  &:focus {
+    fill: $acent-color;
+    cursor: pointer;
+  }
+}
+
+.contact__icon--mail {
+  height: 12px;
+  width: 16px;
+  fill: currentColor;
+
+  &:hover,
+  &:active,
+  &:focus {
+    fill: $acent-color;
+    cursor: pointer;
+  }
+}

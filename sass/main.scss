@@ -1,0 +1,20 @@
+/* BASE */
+@import "./base/base";
+@import "./base/container";
+
+/* COMPONENTS */
+@import "./components/example_client";
+@import "./components/gallery_products";
+@import "./components/gallery_team";
+@import "./components/navigation_buttons";
+@import "./components/page_description";
+@import "./components/page_footer";
+@import "./components/page_header";
+@import "./components/place_order";
+@import "./components/products";
+@import "./components/modal";
+
+/* UTILS */
+@import "./utils/mixins";
+@import "./utils/placeholder";
+@import "./utils/vars";

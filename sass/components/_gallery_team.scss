@@ -1,0 +1,54 @@
+.section-team {
+  background-color: $buttons-port-color;
+}
+
+.section-team__title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.grid__shape {
+  box-shadow: 0px 2px 1px 0px #00000033;
+  box-shadow: 0px 1px 1px 0px #00000024;
+  box-shadow: 0px 1px 3px 0px #0000001f;
+  background-color: $secondary-text-color;
+  border-radius: 4px;
+}
+
+.wrap-team__names {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.wrap-team__position {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: $ouwer-text-color;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.grid-social__circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $icon-social-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: $color-transition, $background-transition;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $acent-color;
+    color: $secondary-text-color;
+  }
+}
