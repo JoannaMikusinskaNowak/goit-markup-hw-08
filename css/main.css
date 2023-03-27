@@ -1006,8 +1006,6 @@ footer {
 
 .modal {
   position: absolute;
-  width: 528px;
-  min-height: 581px;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1019607843);
   border-radius: 4px;
@@ -1030,6 +1028,21 @@ footer {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 40px;
+}
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 95%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+    overflow: scroll;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .button--close {
