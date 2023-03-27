@@ -1,10 +1,17 @@
 /* navigation */
 .navigation {
-  display: flex;
+  display: none;
   align-items: center;
   margin: 0px;
   padding: 0px;
   gap: 46px;
+
+  @include mq(tablet) {
+    display: flex;
+  }
+
+  @include mq(desktop) {
+  }
 }
 
 .navigation__element {
@@ -69,6 +76,9 @@
   &:hover,
   &:focus {
     color: $acent-color;
+  }
+  @include mq(tablet) {
+    padding: 0;
   }
 }
 

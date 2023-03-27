@@ -1,34 +1,105 @@
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+/* BREAKPOINTS */
+$breakpoints: (
+  "phone": 480px,
+  "tablet": 768px,
+  "desktop": 1200px,
+);
+
+@mixin mq($width) {
+  $width: map_get($breakpoints, $width);
+  @media screen and (min-width: $width) {
+    @content;
+  }
 }
 
-.section-products {
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include mq(tablet) {
+    padding-bottom: 45px;
+  }
+  @include mq(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.section-products__is-hidden {
   @extend .section;
   padding-top: 0px;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  @include mq(desktop) {
+    display: contents;
+  }
 }
 
 .conteiner {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  @include mq(desktop) {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
 }
 
 .header-wrap {
   @extend .conteiner;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  min-width: 320px;
+  max-width: 1170px;
+  min-height: 80px;
+
+  @include mq(tablet) {
+    max-width: 768px;
+  }
+  @include mq(desktop) {
+    max-width: 1200px;
+  }
 }
 
 .conteiner__contact {
   margin-left: auto;
-  display: flex;
+  display: none;
   gap: 50px;
+
+  @include mq(tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  @include mq(desktop) {
+    flex-direction: row;
+    gap: 30px;
+  }
 }
 
 /* PAGE DESCRIPTION */
-/* PRODUCTS */
 .grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  @include mq(tablet) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
+  }
+  @include mq(desktop) {
+    flex-wrap: nowrap;
+    grid-template-rows: none;
+  }
+}
+
+/* PRODUCTS */
+.grid-products {
   display: flex;
   gap: 30px;
 }
@@ -44,15 +115,48 @@
 .conteiner-footer {
   @extend .conteiner;
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
+  justify-content: center;
+
+  @include mq(desktop) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }
 
 .conteiner-social {
-  margin-left: 70px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mq(tablet) {
+    margin-top: 0;
+    margin-left: 70px;
+    @include mq(desktop) {
+      display: inline-block;
+    }
+  }
 }
 
 .conteiner-newsletter {
   margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  @include mq(tablet) {
+    flex-direction: column;
+    margin-left: calc(100% / 2);
+    margin-right: calc(100% / 2);
+  }
+  @include mq(desktop) {
+    margin-left: 78px;
+    margin-right: auto;
+    align-items: flex-start;
+  }
 }
 
 /* TEAM, FOOTER */
@@ -70,7 +174,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
 }
 
 /* NAVIGATION BUTTON */
