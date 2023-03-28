@@ -15,34 +15,36 @@ $breakpoints: (
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-  @include mq(tablet) {
-    padding-bottom: 45px;
-  }
+
   @include mq(desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
 }
 
-.section-products__is-hidden {
-  @extend .section;
-  padding-top: 0px;
-  opacity: 0;
+.section-products {
+  padding-top: 0;
+  padding-bottom: 94px;
   display: none;
-  pointer-events: none;
+
   @include mq(desktop) {
-    display: contents;
+    display: flex;
   }
 }
 
 .conteiner {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-  @include mq(desktop) {
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
     width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
   }
 }
 
@@ -143,14 +145,11 @@ $breakpoints: (
 }
 
 .conteiner-newsletter {
-  margin-left: auto;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-top: 60px;
   @include mq(tablet) {
-    flex-direction: column;
     margin-left: calc(100% / 2);
     margin-right: calc(100% / 2);
   }

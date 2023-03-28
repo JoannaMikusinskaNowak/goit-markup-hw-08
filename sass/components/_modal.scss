@@ -218,6 +218,8 @@
   z-index: 999;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-container.is-open {
@@ -244,8 +246,8 @@
 }
 
 .conteiner-modal__contact {
-  padding-top: 302px;
-  padding-bottom: 64px;
+  margin-top: auto;
+  margin-bottom: 64px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -266,9 +268,12 @@
 }
 
 .social-modal {
+  margin-top: auto;
+  margin-bottom: 48px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 20px;
 }
 

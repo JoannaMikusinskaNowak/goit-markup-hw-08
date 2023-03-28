@@ -1,28 +1,61 @@
-.section-order {
-  text-align: center;
-  padding: 200px 0;
-  background-image: linear-gradient(to bottom, $order-shadow, $order-shadow),
-    url(../images/mobile/first_img_mobile.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
-  background-color: $background-footer-color;
-  min-width: 480px;
-  min-height: 400px;
-  margin: 0 auto;
-
-  @include mq(tablet) {
+@media screen and (max-width: 767px) {
+  .section-order {
+    text-align: center;
+    padding: 118px 0;
     background-image: linear-gradient(to bottom, $order-shadow, $order-shadow),
-      url(../images/tablet/first_img_tablet.jpg);
-    min-width: 768px;
-  }
-  @include mq(desktop) {
-    background-image: linear-gradient(to bottom, $order-shadow, $order-shadow),
-      url(../images/first_img_desktop.jpg);
-    min-width: 1200px;
-    min-height: 600px;
+      url(../images/mobile/first_img_mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-color: $background-footer-color;
+    max-width: 480px;
+    height: 400px;
+    margin: 0 auto;
   }
 }
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .section-order {
+    background-image: linear-gradient(to bottom, $order-shadow, $order-shadow),
+      url(../images/mobile/first_img_mobile@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .section-order {
+    max-width: 768px;
+    background-image: linear-gradient(to bottom, $order-shadow, $order-shadow),
+      url(../images/tablet/first_img_tablet.jpg);
+  }
+}
+@media screen and (max-width: 1199px) and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .section-order {
+    background-image: linear-gradient(to bottom, $order-shadow, $order-shadow),
+      url(../images/tablet/first_img_tablet@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-order {
+    max-width: 1600px;
+    height: 600px;
+    padding: 200px 0;
+    background-image: linear-gradient(to bottom, $order-shadow, $order-shadow),
+      url(../images/first_img_desktop.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .section-order {
+    background-image: linear-gradient(to bottom, $order-shadow, $order-shadow),
+      url(../images/first_img_desktop@2x.jpg);
+  }
+}
+
 .section-order__header {
   font-size: 26px;
   font-weight: 900;
